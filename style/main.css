@@ -1,0 +1,244 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+/**
+ * Bases
+ */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans';
+	-webkit-box-sizing: border-box;
+		 -o-box-sizing: border-box;
+			box-sizing: border-box;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+}
+ul li {
+	list-style: none;
+	font-size: 1rem;
+}
+a {
+	text-decoration: none;
+	color: #0489B1;
+}
+
+div.container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+/**
+ * Barre de navigation
+ */
+#navbar {
+	width: 200px;
+	min-height: 900px;
+	background: #0489B1;
+}
+#navbar ul {
+	padding: 30px 0;
+}
+#navbar ul li {
+	list-style-type: none;
+	cursor: pointer;
+}
+#navbar ul li:hover {
+	background: #16A4D0;
+}
+#navbar ul li a {
+	display: block;
+	padding: 5px 20px;
+	color: #FFFFFF;
+}
+
+#toolbar ul {
+	padding: 20px;
+}
+#toolbar ul li a {
+	padding: 10px 20px;
+	background: #F3F3F3;
+	transition: all 0.2s ease;
+}
+#toolbar ul li.active a {
+	background: #0489B1;
+	color: #F3F3F3;
+}
+
+#toolbar .ecrire_message {
+	margin-right: 20px;
+}
+
+.container_2 {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - 200px);
+}
+
+/**
+ * Barre de recherche
+ */
+#searchbox {
+	margin: 20px 10px;
+}
+#searchbox input[type="text"] {
+	position: relative;
+	left: -5px;
+	width: 500px;
+	padding: 7px 20px;
+	border: 1px solid #C5C5C5;
+	border-left: 0px;
+}
+#searchbox button {
+	padding: 7px 20px;
+	border-width: 1px;
+	border-style: solid;
+	transition: all 0.4s ease;
+}
+#searchbox button.recherche {
+	border-color: #C5C5C5;
+	border-right: 0px;
+	background: #E1FAFF;
+	color: #0489B1;
+}
+/*#searchbox button.recherche:hover {
+	border-color: #0489B1;
+	background: #0489B1;
+	color: #BCF3FF;
+}*/
+#searchbox button.reinitialisation {
+	border-color: #FFC7BD;
+	background: #FFC7BD;
+	color: #B02703;
+}
+#searchbox button.reinitialisation:hover {
+	border-color: #B02703;
+	background: #B02703;
+	color: #FFC7BD;
+}
+
+/**
+ * Boite de réception
+ */
+table#mailbox {
+	width: 100%;
+	border-collapse: collapse;
+}
+table#mailbox thead tr th {
+	text-align: left;
+}
+table#mailbox thead tr th > i.caret_tri {
+	margin-left: 20px;
+}
+table#mailbox thead tr th.from {
+	width: 200px;
+}
+table#mailbox thead tr th.to {
+	width: 200px;
+}
+table#mailbox thead tr th.subject {
+	width: calc(100% - 600px);
+}
+table#mailbox thead tr th.date {
+	width: 200px;
+}
+table#mailbox thead tr:nth-child(n) {
+	background: #F1F1F1;
+}
+table#mailbox tr th,
+table#mailbox tr td {
+	padding: 5px 10px;
+	cursor: pointer;
+}
+table#mailbox tbody tr {
+	border-top: 2px solid #F3F3F3;
+}
+table#mailbox tbody tr:last-child {
+	border-bottom: 2px solid #F3F3F3;
+}
+table#mailbox tbody tr:nth-child(n) {
+	background: #FAFAFA;
+}
+table#mailbox tbody tr:nth-child(2n) {
+	background: #FFFFFF;
+}
+table#mailbox tbody tr:hover {
+	background: #0489B1;
+	color: #F3F3F3;
+}
+.messages_quantities {
+	font-style: italic;
+	color: #707070;
+}
+
+#mail_present {
+	margin-top: 20px;
+	padding: 20px;
+}
+
+#mail_present .champ_present .intro {
+	font-weight: bold;
+}
+
+#mail_present .text {
+	width: 800px;
+}
+#mail_present .text p {
+	margin: 20px 0;
+	text-align: justify;
+}
+
+/**
+ *
+ */
+form .grp_input {
+	display: flex;
+	flex-direction: row;
+	margin: 15px 0;
+}
+form .grp_input label {
+	width: 150px;
+	padding: 7px 20px;
+	text-align: right;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form button {
+	position: relative;
+	left: -5px;
+	padding: 7px 20px;
+	border: 1px solid #C5C5C5;
+	font-size: 1rem;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+	width: 700px;
+}
+form textarea {
+	padding-top: 20px;
+}
+form .grp_input.grp_input_btn {
+	display: flex;
+	flex-direction: row;
+	padding: 20px 150px;
+}
+form .grp_input.grp_input_btn button {
+	margin-right: 20px;
+	cursor: pointer;
+}
+form .grp_input.grp_input_btn button.envoyer:hover {
+	background: #0489B1;
+	color: #F3F3F3;
+}
+form .grp_input.grp_input_btn button.raz:hover {
+	background: #FFC7BD;
+	color: #B02703;
+}
